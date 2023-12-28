@@ -1,13 +1,17 @@
+import fetcher from "@/utils/swr/fatcher";
+import DetailProductPage from "@/views/DetailProduct.tsx";
+import { log } from "console";
 import { useRouter } from "next/router";
+import useSWR from "swr";
 
 export default function ProductDetailPage() {
   const { query } = useRouter();
-  return (
-    <>
-      <h1>Product</h1>
-      <main>
-        <h1>Product : {query.product}</h1>
-      </main>
-    </>
+
+  const { data, error, isLoading } = useSWR(
+    `/api/product/${query.product}`,
+    fetcher
   );
+
+  const product = data?.data || {};
+  return <DetailProductPage product={product} />;
 }
