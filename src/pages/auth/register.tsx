@@ -1,6 +1,5 @@
-import RegisterPage from "@/views/Auth/Register";
-import Link from "next/link";
+import RegisterView from "@/views/Auth/Register";
 
 export default function Register() {
-  return <RegisterPage />;
+  return <RegisterView />;
 }

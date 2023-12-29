@@ -1,5 +1,5 @@
 import fetcher from "@/utils/swr/fatcher";
-import DetailProductPage from "@/views/DetailProduct.tsx";
+import DetailProductView from "@/views/DetailProduct.tsx";
 import { log } from "console";
 import { useRouter } from "next/router";
 import useSWR from "swr";
@@ -13,5 +13,5 @@ export default function ProductDetailPage() {
   );
 
   const product = data?.data || {};
-  return <DetailProductPage product={product} />;
+  return <DetailProductView product={product} />;
 }

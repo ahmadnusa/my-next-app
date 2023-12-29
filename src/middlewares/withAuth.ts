@@ -18,6 +18,11 @@ export default function withAuth(
         secret: process.env.NEXTAUTH_SECRET,
       });
       if (!token) {
+        const url = new URL("/auth/login", req.url);
+        url.searchParams.set("callbackUrl", req.url);
+        return NextResponse.redirect(url);
+      }
+      if (token.role !== "admin" && pathname.includes("/admin")) {
         return NextResponse.redirect(new URL("/", req.url));
       }
     }

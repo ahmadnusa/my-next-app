@@ -1,6 +1,6 @@
 import { productType } from "@/types/product.type";
 
-export default function DetailProductPage({
+export default function DetailProductView({
   product,
 }: {
   product: productType;

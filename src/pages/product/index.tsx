@@ -1,6 +1,6 @@
 import fetcher from "@/utils/swr/fatcher";
 import ProductView from "@/views/product";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useSWR from "swr";
 
 export default function ProductPage() {
