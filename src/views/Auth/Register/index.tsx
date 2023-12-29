@@ -15,7 +15,12 @@ export default function RegisterView() {
     event.preventDefault();
     setError("");
     setIsLoading(true);
-    const data = { fullname: fullName, email: email, password: password };
+    const data = {
+      fullname: fullName,
+      email: email,
+      password: password,
+      type: "credentials",
+    };
     const result = await fetch("/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
