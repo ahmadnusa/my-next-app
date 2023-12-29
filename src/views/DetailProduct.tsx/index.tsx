@@ -1,4 +1,5 @@
 import { productType } from "@/types/product.type";
+import Image from "next/image";
 
 export default function DetailProductView({
   product,
@@ -14,8 +15,11 @@ export default function DetailProductView({
             key={product.id}
             className="w-1/4 p-2 mx-2 border border-gray-200 rounded-md shadow-md"
           >
-            <img
+            <Image
               src={product.image}
+              height={500}
+              width={500}
+              priority={true}
               alt="Picture of the author"
               className="mb-4"
             />

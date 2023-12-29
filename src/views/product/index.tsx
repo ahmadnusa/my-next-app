@@ -1,4 +1,5 @@
 import { productType } from "@/types/product.type";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ProductView({ products }: { products: productType[] }) {
@@ -13,9 +14,11 @@ export default function ProductView({ products }: { products: productType[] }) {
               key={product.id}
               className="w-1/4 p-2 mx-2 border border-gray-200 rounded-md shadow-md"
             >
-              <img
+              <Image
                 src={product.image}
-                alt="Picture of the author"
+                alt={product.name}
+                height={500}
+                width={500}
                 className="mb-4"
               />
               <h4 className="font-bold">{product.name}</h4>

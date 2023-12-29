@@ -11,7 +11,7 @@ export default function AppShell(props: AppShellProps) {
   const { children } = props;
   const { pathname } = useRouter();
   return (
-    <main>
+    <main className="font-body">
       {!disableNavbar.includes(pathname) && <Navbar />}
       {children}
     </main>
