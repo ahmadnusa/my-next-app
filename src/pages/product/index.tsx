@@ -16,5 +16,5 @@ export default function ProductPage() {
   //     });
   // }, []);
 
-  return <ProductView products={isLoading ? [] : data.data} />;
+  return <ProductView products={isLoading ? [] : data?.data} />;
 }

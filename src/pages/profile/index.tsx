@@ -2,7 +2,7 @@ import { useSession } from "next-auth/react";
 import Head from "next/head";
 
 export default function Profile() {
-  const { data }: any = useSession();
+  // const { data }: any = useSession() || {};
 
   return (
     <>
@@ -14,9 +14,9 @@ export default function Profile() {
         <p className="text-gray-500">
           This page is only accessible to signed-in users.
         </p>
-        <p className="text-gray-500">
+        {/* <p className="text-gray-500">
           You&apos;re signed in as <strong>{data?.user?.fullname}</strong>.
-        </p>
+        </p> */}
       </div>
     </>
   );

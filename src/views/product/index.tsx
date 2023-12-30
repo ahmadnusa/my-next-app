@@ -7,7 +7,7 @@ export default function ProductView({ products }: { products: productType[] }) {
     <div className="w-full ">
       <h1 className="text-center text-4xl font-bold ">Product</h1>
       <div className="flex px-9 py-0">
-        {products.length > 0 ? (
+        {products?.length > 0 ? (
           products.map((product: productType) => (
             <Link
               href={`/product/${product.id}`}
